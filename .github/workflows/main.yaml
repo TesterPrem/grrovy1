@@ -23,4 +23,4 @@ jobs:
           distribution: 'adopt'
           
       - name: Execute Groovy Code
-        run: groovy /file.groovy
+        run: groovy file.groovy
