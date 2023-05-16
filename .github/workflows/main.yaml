@@ -22,10 +22,5 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
           
-      - name: Install Groovy
-        run: |
-          curl -s get.sdkman.io | bash
-          source
-
       - name: Execute Groovy Code
         run: groovy /file.groovy
