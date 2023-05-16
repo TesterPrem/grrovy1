@@ -22,9 +22,11 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
           
-      - name: Import Groovy library
+      - name: Install Groovy
         run: |
-          ./gradlew build
-      - name: Run tests
+          sudo apt-get update
+          sudo apt-get install -y groovy
+        
+      - name: Run Groovy script
         run: |
-          ./gradlew tests/file.groovy
+          groovy tests/file.groovy
