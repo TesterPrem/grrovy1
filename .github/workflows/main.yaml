@@ -22,5 +22,9 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
           
-      - name: Execute Groovy Code
-        run: groovy file.groovy
+      - name: Import Groovy library
+        run: |
+          ./gradlew build
+      - name: Run tests
+        run: |
+          ./gradlew tests/file.groovy
