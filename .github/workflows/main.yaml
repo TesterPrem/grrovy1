@@ -23,9 +23,9 @@ jobs:
           distribution: 'adopt'
           
       - name: Install Groovy
-        uses: apache/groovy-actions@v1
-        with:
-          version: 3.0.9
+        run: |
+          curl -s get.sdkman.io | bash
+          source
 
       - name: Execute Groovy Code
         run: groovy /file.groovy
